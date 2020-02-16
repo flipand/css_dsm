@@ -32,6 +32,6 @@ export default create({
     inputBorderRadius: 4,
 
     brandTitle: "flip.and DSM",
-    brandUrl: "flipand.one",
+    brandUrl: "https://flipand.one/dsm",
     brandImage: "",
 });
