@@ -1,0 +1,64 @@
+input[type="radio"].fl-radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    &:before {
+        content: "";
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background: white;
+        border: 2px solid black;
+        border-radius: 100%;
+        color: black;
+        width: 1rem;
+        height: 1rem;
+    }
+    &:checked::after {
+        content: "";
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        background: black;
+        border-radius: 100%;
+        width: .45rem;
+        height: .45rem;
+    }
+
+    &.fl-primary::before {
+        border-color: green;
+        color: black;
+        background: white;
+    }
+    &.fl-primary::after {
+        background: black;
+    }
+
+    &.fl-secondary::before {
+        border-color: white;
+        color: white;
+        background: transparent;
+    }
+    &.fl-secondary::after {
+        background: white;
+    }
+
+    &:disabled::before {
+        border-color: grey;
+        background: silver;
+    }
+    &:disabled::after {
+        background: grey;
+    }
+}
